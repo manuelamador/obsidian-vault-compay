@@ -1,4 +1,4 @@
-# Vault Agent
+# Vault Compay
 
 Chat with [Claude Code](https://claude.com/product/claude-code) or [Codex](https://developers.openai.com/codex) inside [Obsidian](https://obsidian.md). The plugin runs your installed command-line tools with your vault as their working folder, so they can read your notes and help you edit them.
 
@@ -8,11 +8,11 @@ Claude Code runs through the Claude Agent SDK and uses your existing CLI sign-in
 > I built this plugin for my own use. Use it at your own risk.
 
 > [!IMPORTANT]
-> Vault Agent is an independent project. It is not affiliated with, endorsed by or sponsored by Anthropic or OpenAI. It runs the Claude Code and Codex installed on your computer, signed in with your own account, and never handles your credentials. Your use of Claude Code and Codex is governed by your own agreements with Anthropic and OpenAI. Claude, Claude Code and Codex are trademarks of their owners.
+> Vault Compay is an independent project. It is not affiliated with, endorsed by or sponsored by Anthropic or OpenAI. It runs the Claude Code and Codex installed on your computer, signed in with your own account, and never handles your credentials. Your use of Claude Code and Codex is governed by your own agreements with Anthropic and OpenAI. Claude, Claude Code and Codex are trademarks of their owners.
 
 Built by **Claude Opus 5** (`claude-opus-5`) and **Claude Opus 5.5** (`claude-opus-5-5`) in Claude Code.
 
-<img src="docs/chat.webp" width="800" alt="A note with equations beside the Vault Agent chat panel in Obsidian.">
+<img src="docs/chat.webp" width="800" alt="A note with equations beside the Vault Compay chat panel in Obsidian.">
 
 ## Requirements
 
@@ -34,17 +34,19 @@ Install the Codex CLI with `npm install -g @openai/codex` or `brew install codex
 
 ## Installation
 
-The simplest installation is to download three files and copy them into your vault. No build is needed. Vault Agent is not yet listed in Obsidian's community plugin directory.
+The simplest installation is to download three files and copy them into your vault. No build is needed. Vault Compay is not yet listed in Obsidian's community plugin directory.
 
 ### Download three files
 
 > [!TIP]
 > **No build required.**
 >
-> 1. Download **main.js**, **manifest.json** and **styles.css** from the latest [release](https://github.com/manuelamador/obsidian-vault-agent/releases).
+> 1. Download **main.js**, **manifest.json** and **styles.css** from the latest [release](https://github.com/manuelamador/obsidian-vault-compay/releases).
 > 2. Move all three files into `<vault>/.obsidian/plugins/vault-claude/`. Create the folder if it does not exist.
-> 3. In **Settings → Community plugins**, turn off Restricted mode if needed and enable **Vault Agent**.
-> 4. Open the chat from the robot icon or **Vault Agent: Open chat**.
+> 3. In **Settings → Community plugins**, turn off Restricted mode if needed and enable **Vault Compay**.
+> 4. Open the chat from the robot icon or **Vault Compay: Open chat**.
+
+The folder is named after the plugin's id, `vault-claude`, from before the plugin was renamed: it was called Vault Claude, then Vault Agent. An existing installation updates in place and keeps its settings and chats.
 
 The `.obsidian` folder is hidden. In Finder, press ⌘⇧. to show it. In Windows File Explorer, enable **View → Show → Hidden items**.
 
@@ -56,11 +58,11 @@ To update a manual installation, replace the three files and disable and re-enab
 
 1. In **Settings → Community plugins**, turn off Restricted mode if needed. Choose **Browse**, find **BRAT**, and install and enable it.
 2. Run **BRAT: Add a beta plugin for testing**.
-3. Enter `manuelamador/obsidian-vault-agent` and choose **Add Plugin**.
-4. Enable **Vault Agent** in **Settings → Community plugins** if BRAT has not already enabled it.
-5. Click the robot icon in the left ribbon, or run **Vault Agent: Open chat**.
+3. Enter `manuelamador/obsidian-vault-compay` and choose **Add Plugin**.
+4. Enable **Vault Compay** in **Settings → Community plugins** if BRAT has not already enabled it.
+5. Click the robot icon in the left ribbon, or run **Vault Compay: Open chat**.
 
-BRAT installs `main.js`, `manifest.json` and `styles.css` in `<vault>/.obsidian/plugins/vault-claude/`. Enable startup updates in BRAT's settings, or run **BRAT: Check for updates to all beta plugins and UPDATE**. Disable and re-enable Vault Agent after an update to load the new version.
+BRAT installs `main.js`, `manifest.json` and `styles.css` in `<vault>/.obsidian/plugins/vault-claude/`. Enable startup updates in BRAT's settings, or run **BRAT: Check for updates to all beta plugins and UPDATE**. Disable and re-enable Vault Compay after an update to load the new version.
 
 ### Executable paths
 
@@ -68,7 +70,7 @@ The plugin looks for Claude Code in `~/.local/bin`, Homebrew's folders and PATH.
 
 For Codex, it checks PATH, Homebrew's folders and the ChatGPT app's installation at `~/.codex/plugins/.plugin-appserver/codex-cli/bin`.
 
-If detection fails, set **Claude Code executable** or **Codex executable** under **Settings → Vault Agent**.
+If detection fails, set **Claude Code executable** or **Codex executable** under **Settings → Vault Compay**.
 
 ## Features
 
@@ -440,7 +442,7 @@ Messages and context are sent through Claude Code or Codex. If Zotero integratio
 | **Appearance and input** | |
 | Tool calls | Show a summary, individual lines, or hide them |
 | Panel side margins | Horizontal margins from 8 to 96 px |
-| Open one Vault Agent panel at start | When Obsidian starts, close the Vault Agent tabs left from the last session but one (the sidebar panel, else the first); on by default |
+| Open one Vault Compay panel at start | When Obsidian starts, close the Vault Compay tabs left from the last session but one (the sidebar panel, else the first); on by default |
 | Send with ⌘+Enter (Ctrl+Enter on Windows) | Use the modifier shortcut instead of Enter |
 | **Phone access** | |
 | Claude Code on the phone | Enable Remote Control for Claude chats and new vault sessions; off by default |
@@ -452,7 +454,7 @@ Messages and context are sent through Claude Code or Codex. If Zotero integratio
 
 ## Commands
 
-Use Obsidian's command palette and search for **Vault Agent**. Commands include:
+Use Obsidian's command palette and search for **Vault Compay**. Commands include:
 
 - **Chats:** Open chat; New chat; New chat in a new tab; New Codex chat; Chat history; Rename chat; Branch this chat into a new tab; Save chat as note; Save chat summary as note; Run this message in a new chat, report back.
 - **Navigation:** Find in chat; Show references in this chat; Go to previous / next message you sent; List messages you sent; Focus chat input; Move chat to the main area, or back to the sidebar; Open chat in a new window.

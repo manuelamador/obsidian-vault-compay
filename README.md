@@ -246,7 +246,7 @@ The controls below the input select the model, effort, permission mode and fast 
 
 - **Return to recent work.** An empty chat lists recent conversations, with pinned chats first. **Pick up where you left off** suggests recent and older conversations that may be worth continuing.
 - **Delegate a task.** Right-click **Send**, or run **Run this message in a new chat, report back**. Your message runs in a linked background chat using the current engine, model and attached note. A report appears here when it finishes; you decide whether to add it to your message, open the chat or dismiss it.
-- **Keep several chats running.** Switching chats preserves their drafts and attached notes. A tab on the panel's right edge marks a background reply that finished or failed. Open separate chat tabs or branch from an earlier reply.
+- **Keep several chats running.** Switching chats preserves their drafts and attached notes. A tab on the panel's right edge marks a background reply that finished or failed; an amber one, at the top, marks a background chat waiting for your answer or approval, and goes once nothing waits there. Open separate chat tabs or branch from an earlier reply.
 - **Use a scratch chat.** Keep a standing conversation for quick questions. It starts over after 24 hours unused by default; useful exchanges can be copied into ordinary chats.
 - **Save a conversation.** The chat menu (**⋯** beside the title) saves the chat or a summary as a note, closes the chat, or deletes it.
 

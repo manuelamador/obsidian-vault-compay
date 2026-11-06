@@ -228,7 +228,7 @@ The controls below the input select the model, effort, permission mode and fast 
 - **Edit in a note** opens a temporary plan note. Approval sends your revised version and removes the temporary note. If Esc withdraws the plan, your edits are retained for Claude's next plan in that chat.
 - **Skip** declines a question.
 
-  <img src="docs/question-yes-no.png" width="500" alt="A question card with choices, a written-answer field, Send and Skip.">
+  <img src="docs/question-card.png" width="560" alt="A question card: Claude asks which extension of the Solow model to explore, with four choices as rows, Other… last, and Skip and Send.">
 
 - Hover over the usage meter for token counts, account usage and reset times. A divider marks compaction.
 

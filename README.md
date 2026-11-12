@@ -383,7 +383,7 @@ Codex permits only one app-server to write a chat at a time. While the shared ap
 | ↑ in an empty input | Recall sent messages, starting with this chat and then other chats; ↓ moves forward, Esc clears |
 | Esc | Stop the reply, or close a side chat; task shutdown may require confirmation |
 | ⌥↑ / ⌥↓ | Previous / next prompt |
-| ⌘[ / ⌘] (Windows: Alt+← / Alt+→) | Back / forward through visited chats; the chat arrived at is named large over the messages, with a dot for each chat back and forward, while ⌘ (Alt) is held; from the arrows, for half a second |
+| ⌘[ / ⌘] (Windows: Alt+← / Alt+→) | Back / forward through the chats visited since Obsidian started; the chat arrived at is named large over the messages, with a dot for each chat back and forward, while ⌘ (Alt) is held; from the arrows, for half a second |
 | ⌘F | Find; ↩ and ⇧↩ move between matches, Esc closes |
 | ⌘-click New chat | Open a new chat tab |
 | ⌘-click / ⌥-click a note in the In this chat window (or ⌘↵ / ⌥↵) | Open in a new tab / attach as an `@` mention |

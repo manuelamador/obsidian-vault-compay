@@ -129,7 +129,7 @@ mjx-container.MathJax { font-size: calc(113.1% * 1.05) !important; }
 
 ### Working with notes
 
-- **Add context.** Attach the open note, include selected text, or mention notes, files and folders with `@`. Use the paperclip, paste, or drag and drop to add files and images. With the attached note open in front and nothing selected in it, each message also says where its cursor is, by line and section, as a hint; the chip's tooltip shows it.
+- **Add context.** Attach the open note, include selected text, or mention notes, files and folders with `@`. Use the paperclip, paste, or drag and drop to add files and images. With the attached note open in front and nothing selected in it, each message also says where its cursor is, by line and section, as a hint; the chip shows the line, and its tooltip the section.
 - **Suggest frontmatter updates.** Review proposed property changes based on a note, nearby notes and related chats. Edit the values and apply only the ones you select. Folder-specific guidance is remembered.
 - **Edit a selection.** Right-click selected note text to ask a question or request an edit. Review the word diff before accepting.
 
@@ -269,6 +269,7 @@ The plugin reads chats and memos locally. It sends short excerpts to the selecte
 <details>
 <summary><strong>History, branches and background tasks</strong></summary>
 
+- **A chat is on while you use it, and for 30 minutes after.** Opening a chat starts its Claude Code (or Codex) at once, so it answers straight away and, with phone access on, is on the phone. A chat you leave keeps running in the background, and stops once unused for **Chats keep running for** (30 minutes by default): its memory is freed, it comes off the phone, and it reopens from history when you go back to it. A chat still working, with background tasks running or waiting for your answer is never stopped. Nothing starts when Obsidian starts.
 - **Close this chat**, in the chat menu (**⋯** beside the title), closes it as a browser closes a tab: it comes off the phone and the ← → arrows, its process ends, and the chat before it (or a new chat) comes up. It stays in history. A chat still working or waiting on you asks first: leave it in the background, where it finishes and then closes, or stop it. **Close this chat** in the command palette does the same.
 - The clock opens history. A blue phone icon marks a chat available on the phone. **✕** closes a background chat's process while keeping its conversation, or takes a foreground chat off the phone. The plugin asks first if closing would interrupt work or a pending approval. ⌘↵ or ⌘-click opens a history item in a new tab.
 
@@ -301,7 +302,7 @@ The plugin reads chats and memos locally. It sends short excerpts to the selecte
 
 - Scratch appears first in history. Change its timeout in settings or clear it with **Clear the scratch chat** in the chat menu. **Continue as a chat** copies the conversation through a selected reply. **Continue in a chat about "…"** lets you choose a starting prompt for work on a note, copies that work to an ordinary chat, and prepares a message about the note. The scratch chat retains a link to the copy. **Keep scratch chat** copies the whole conversation.
 - **Move chat to the main area, or back to the sidebar** switches between the sidebar and a full-width tab. **Open chat in a new window** gives it a separate window. Running chats keep working. Notes opened from the panel go to the main window. Closing the only chat tab outside the sidebar transfers its work to a new sidebar panel.
-- The arrow beside your message offers **Copy from here on to a new chat**, **Move from here on to a new chat**, **Send this message to another chat…** and **Remove from here on**. Claude moves and removals offer Undo for ten seconds. Undoing a move also deletes its new chat unless you have continued it. A chat on your phone is taken off it for a move or removal and put back afterwards with a new link (after a move, the new chat goes on the phone). These actions change conversations, not files the assistant edited. Codex has different removal limits, described below.
+- The arrow beside your message offers **Copy from here on to a new chat**, **Move from here on to a new chat**, **Send this message to another chat…**, **Send from here on to another chat…** and **Remove from here on**. **Send from here on to another chat…** puts this message and everything after it into another chat's input as a quote, each part marked **You:** or **Claude:**, with images you pasted attached and the notes the replies changed named at the end; the steps between are left out, and a long part can be summarised first. Claude moves and removals offer Undo for ten seconds. Undoing a move also deletes its new chat unless you have continued it. A chat on your phone is taken off it for a move or removal and put back afterwards with a new link (after a move, the new chat goes on the phone). These actions change conversations, not files the assistant edited. Codex has different removal limits, described below.
 
   <img src="docs/copy-from-here.png" width="178" alt="The arrow beside a user message for copy, move and removal actions.">
 
@@ -346,7 +347,7 @@ Codex chats are labelled beside their titles, in history and in Connections. The
 - **Small jobs run on** selects the engine for selection edits, summaries, memo suggestions, frontmatter suggestions, project context and **Pick up where you left off**. **Scratch chat model** selects the scratch engine and model. Set all three engine choices to Codex to use the plugin without Claude Code.
 - Removing a Codex chat from panel history leaves its conversation in Codex's own store. An expired or cleared Codex scratch chat is archived there.
 - Branching copies the conversation from its beginning through the selected reply's turn, or copies the whole chat. The copy retains the model, effort and permissions.
-- Codex supports **Send this message to another chat…** and **Remove from here on**. Removal has no Undo. It cannot copy or move only the exchanges after a selected message into another chat.
+- Codex supports **Send this message to another chat…**, **Send from here on to another chat…** and **Remove from here on**. Removal has no Undo. It cannot copy or move only the exchanges after a selected message into another chat.
 - **Compact now** requests compaction and adds a divider when it occurs. **Fast mode** (⚡) requests the fast tier for supported models and uses more of your Codex limits.
 - Chats appear in Codex's own app and phone lists under their panel titles. Context added by the panel is sent separately, so your messages remain readable as typed. Messages from before 0.35.0 retain the older combined format.
 - Codex chats run through Codex's shared app-server, which the panel starts when a chat needs it and stops when Obsidian quits if the panel started it. See **Phone access** for remote control and the ChatGPT app.
@@ -382,7 +383,7 @@ Codex permits only one app-server to write a chat at a time. While the shared ap
 | ↑ in an empty input | Recall sent messages, starting with this chat and then other chats; ↓ moves forward, Esc clears |
 | Esc | Stop the reply, or close a side chat; task shutdown may require confirmation |
 | ⌥↑ / ⌥↓ | Previous / next prompt |
-| ⌘[ / ⌘] (Windows: Alt+← / Alt+→) | Back / forward through visited chats |
+| ⌘[ / ⌘] (Windows: Alt+← / Alt+→) | Back / forward through visited chats; the chat arrived at is named large over the messages, with a dot for each chat back and forward, while ⌘ (Alt) is held; from the arrows, for half a second |
 | ⌘F | Find; ↩ and ⇧↩ move between matches, Esc closes |
 | ⌘-click New chat | Open a new chat tab |
 | ⌘-click / ⌥-click a note in the In this chat window (or ⌘↵ / ⌥↵) | Open in a new tab / attach as an `@` mention |
@@ -428,6 +429,7 @@ Messages and context are sent through Claude Code or Codex. If Zotero integratio
 | Notify when Claude finishes, Notify after | Enable notifications and set the duration threshold; defaults on and 30 seconds |
 | **Scratch chat** | |
 | Scratch chat | Enable the standing scratch conversation; on by default |
+| Chats keep running for | How long a chat you have left keeps its process (and stays on the phone) after its last use: 5 minutes to 2 hours; default 30 minutes |
 | Scratch chat starts over after | Idle timeout from one hour to one week; default 24 hours |
 | Scratch chat model | Engine and model; defaults to the small-job choice |
 | **Permissions** | |

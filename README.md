@@ -78,6 +78,10 @@ If detection fails, set **Claude Code executable** or **Codex executable** under
 
 - **Read replies in Obsidian Markdown.** Wikilinks, callouts, equations and vault images render in the panel. Click a figure to view it over the whole window: scroll or pinch to zoom, drag to move around it, and click or press Esc to close. Thinking, tool calls and intermediate notes collapse into a **Steps** line.
 - **Review file changes.** Replies list changed files and their diffs. Open a file at the affected line.
+- **When it was said.** Point at a message of yours to see when you sent it, or at a reply to see when it finished (the time alone today, with its date on other days); a line across the chat marks each new day (Today, Yesterday, or the weekday and date). Saved chats show them too, from Claude Code's records.
+- **A note as a PDF.** **Export this note to PDF, in attachments beside it** (a command) makes the PDF Obsidian's Export to PDF makes, with its page settings as last used and the vault's print styling, without its dialogs: it goes to `attachments/<note>.pdf` beside the note. Claude can ask for it too, by opening the link `obsidian://vault-claude?pdf=Folder%2FNote.md` from the shell.
+- **Lines of a note.** Claude can send you to a line of a note, or a range of lines, which Obsidian's own links cannot reach: a link through the plugin (`obsidian://vault-claude?note=Folder%2FNote.md&line=42`, or `&line=42-48`) opens the note at that line, in the tab showing it already if one does, and marks the lines for a moment. It works from a reply and from a note.
+- **See a run's figures.** Images and PDFs a reply's run makes in the vault (a plot from a Julia script) show as pictures under the reply. A click shows one large, with ← and → to the others and **Open** to open it in Obsidian (⌘-click opens it in a tab at once); ← and → also move along the pictures. While another chat is working too, only those in a folder the reply's commands name are shown, so that the other chat's are not taken for this one's.
 - **Work with a reply.** Quote a passage, ask a side question, copy it, insert it into a note, save it as a memo, or branch into another chat.
 
 <details>
@@ -468,7 +472,7 @@ Messages and context are sent through Claude Code or Codex. If Zotero integratio
 Use Obsidian's command palette and search for **Vault Compay**. Commands include:
 
 - **Chats:** Open chat; New chat; New chat in a new tab; New Codex chat; Chat history; Rename chat; Branch this chat into a new tab; Save chat as note; Save chat summary as note; Run this message in a new chat, report back.
-- **Navigation:** Find in chat; Show references in this chat; Go to previous / next message you sent; List messages you sent; Focus chat input; Move chat to the main area, or back to the sidebar; Open chat in a new window.
+- **Navigation:** Find in chat; Show references in this chat; Go to previous / next message you sent; List messages you sent; Focus chat input; Switch between the note and the chat (⌘Esc, Ctrl+Esc elsewhere: to the chat's input, and back to the note where its cursor was); Move chat to the main area, or back to the sidebar; Open chat in a new window.
 - **Notes and messages:** Ask Claude about selection; Edit selection with Claude; Send this note to Claude as a prompt; Suggest frontmatter updates for this note; Draft an email from this note…; Quote the selected chat text in your next message; Write this message in a note; Send the draft note.
 - **Memos and projects:** Continue from this memo; Open connections; Open project…; Create project…; Write every project's context anew; Rebuild connections from chat files.
 - **Scratch and suggestions:** Open scratch chat; Clear scratch chat; Pick up where you left off; Pick up where you left off: show ignored chats again.

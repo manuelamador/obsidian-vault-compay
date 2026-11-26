@@ -472,7 +472,7 @@ Messages and context are sent through Claude Code or Codex. If Zotero integratio
 Use Obsidian's command palette and search for **Vault Compay**. Commands include:
 
 - **Chats:** Open chat; New chat; New chat in a new tab; New Codex chat; Chat history; Rename chat; Branch this chat into a new tab; Save chat as note; Save chat summary as note; Run this message in a new chat, report back.
-- **Navigation:** Find in chat; Show references in this chat; Go to previous / next message you sent; List messages you sent; Focus chat input; Switch between the note and the chat (⌘Esc, Ctrl+Esc elsewhere: to the chat's input, and back to the note where its cursor was); Move chat to the main area, or back to the sidebar; Open chat in a new window.
+- **Navigation:** Find in chat; Show references in this chat; Go to previous / next message you sent; List messages you sent; Focus chat input; Switch between the note and the chat (⌥Esc on macOS; elsewhere set one under Settings → Hotkeys: to the chat's input, and back to the note where its cursor was); Move chat to the main area, or back to the sidebar; Open chat in a new window.
 - **Notes and messages:** Ask Claude about selection; Edit selection with Claude; Send this note to Claude as a prompt; Suggest frontmatter updates for this note; Draft an email from this note…; Quote the selected chat text in your next message; Write this message in a note; Send the draft note.
 - **Memos and projects:** Continue from this memo; Open connections; Open project…; Create project…; Write every project's context anew; Rebuild connections from chat files.
 - **Scratch and suggestions:** Open scratch chat; Clear scratch chat; Pick up where you left off; Pick up where you left off: show ignored chats again.
